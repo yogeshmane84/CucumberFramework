@@ -2,12 +2,15 @@ package LearnJunit;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.OrderWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AssertionExample {
 
+
     @Test
+
     public void verifyTitleTC01() {
         WebDriver driver = new ChromeDriver();
         driver.get("https://google.com");
@@ -16,7 +19,9 @@ public class AssertionExample {
         String act = "google";
 
         Assert.assertEquals(exp,act);
-        /*
+       // Assert.assertEquals("google","google");
+
+
         if (exp.equals(act))
         {
             System.out.println("Passed");
@@ -26,7 +31,7 @@ public class AssertionExample {
             System.out.println("Failed");
         }
 
-         */
+
         driver.quit();
 
         }
